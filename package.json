@@ -1,0 +1,35 @@
+{
+  "name": "sphero_map",
+  "version": "1.0.0",
+  "description": "Mapping the office with a sphero",
+  "main": "./server/index.js",
+  "scripts": {
+    "devstart": "nodemon ./server/index.js",
+    "start": "node ./server/index.js",
+    "test": "mocha --compilers js:babel-core/register --recursive",
+    "test:watch": "npm run test -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Flinnja/sphero_map.git"
+  },
+  "author": "Flinn Gendall",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Flinnja/sphero_map/issues"
+  },
+  "homepage": "https://github.com/Flinnja/sphero_map#readme",
+  "dependencies": {
+    "cylon": "^1.2.0",
+    "cylon-sphero": "^0.23.0",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "socket.io": "^1.3.7"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4",
+    "sinon": "^1.17.2",
+    "sinon-chai": "^2.8.0"
+  }
+}
