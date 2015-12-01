@@ -1,0 +1,13 @@
+body{
+  background-color: #222233;
+  color: #FCFC77;
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+  font-size: 2em;
+}
+
+#map{
+  background-color: #333344;
+  margin: 10px;
+  border-radius: 3px;
+}

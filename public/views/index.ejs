@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/../styles/main.css' />
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa:400,700,300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <sciprt src="/scripts/socketSetup.js"></script>
+    <script>
+      $(function(){
+        $('#map').click(function(event){
+          var parentOffset = $(this).offset()
+          var relX = event.pageX - parentOffset.left;
+          var relY = event.pageY - parentOffset.top;
+          var canvas = document.getElementById('map')
+          if(canvas.getContext){
+            var ctx = canvas.getContext('2d')
+            ctx.fillStyle = "#DD3377"
+            ctx.fillRect(relX,relY,2,2)
+          }
+        })
+      })
+    </script>
+
+    <div class='header'>
+      <h1><%= title %></h1>
+      <p>Welcome to <%= title %></p>
+    </div>
+
+    <div class='main'>
+      <canvas id="map" width="1000" height="600"></canvas>
+    </div>
+  </body>
+</html>
