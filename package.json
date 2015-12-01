@@ -2,9 +2,12 @@
   "name": "sphero_map",
   "version": "1.0.0",
   "description": "Mapping the office with a sphero",
-  "main": "index.js",
+  "main": "./server/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "devstart": "nodemon ./server/index.js",
+    "start": "node ./server/index.js",
+    "test": "mocha --compilers js:babel-core/register --recursive",
+    "test:watch": "npm run test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -19,6 +22,7 @@
   "dependencies": {
     "cylon": "^1.2.0",
     "cylon-sphero": "^0.23.0",
+    "ejs": "^2.3.4",
     "express": "^4.13.3",
     "socket.io": "^1.3.7"
   },
