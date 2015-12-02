@@ -4,6 +4,8 @@ var http = require('http').Server(app)
 var path = require('path')
 var io = require('socket.io')(http)
 
+var mapper = require('./sphero.js')(io)
+
 app.use(express.static('public'))
 app.set('views', path.join(__dirname, '../public/views'));
 app.set('view engine', 'ejs');
